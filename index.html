@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แม้กก้านมละมุน | Makka Nom Lamun</title>
+    <meta name="description" content="เสิร์ฟความหวาน ในบรรยากาศสุดละมุน พื้นที่พักผ่อนสไตล์มินิมอลของคุณ">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            background: var(--bg-cream-dark);
+            border-radius: 20px;
+            padding: 2px;
+            border: 1px solid rgba(141, 123, 104, 0.2);
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 18px;
+            font-weight: 600;
+            color: var(--text-medium);
+            cursor: pointer;
+            font-family: var(--font-outfit);
+            transition: var(--transition);
+        }
+        .lang-btn:hover {
+            color: var(--primary);
+        }
+        .lang-btn.active {
+            background: var(--primary);
+            color: var(--bg-white);
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        @media (min-width: 769px) {
+            .mobile-menu-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="./logo.png" alt="Makka Nom Lamun Logo">
+            </a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#menu" class="nav-link" data-i18n="nav_menu">เมนูของเรา</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_gallery">แกลลอรี่</a>
+                <a href="#visit-us" class="nav-cta" data-i18n="nav_visit">การเดินทาง</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button id="lang-th" class="lang-btn active">TH</button>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg" style="background-image: url('./บรรยากาศในร้าน/493940943_2527267730945907_8741123150059989016_n.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <span class="hero-subtitle">Welcome to</span>
+                    <h1 class="hero-title"><span data-i18n="hero_title_1">แม้กก้า</span><span data-i18n="hero_title_2">นมละมุน</span></h1>
+                    <p class="hero-desc" data-i18n="hero_desc">ยินดีต้อนรับสู่พื้นที่แห่งความสุข</p>
+                    <a href="#visit-us" class="btn btn-primary"><span data-i18n="hero_cta">ดูแผนที่การเดินทาง</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <a href="#menu"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- Signature Menu Section -->
+        <section class="section bg-cream" id="menu">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-subtitle">Our Menu</span>
+                    <h2 class="section-title" data-i18n="menu_title">เมนูแนะนำ</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/signature_milk_1781938708128.png" alt="Signature Drink" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_1">นมละมุนซิกเนเจอร์</h3>
+                            <p class="menu-price">฿65</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/honey_toast_1781938748040.png" alt="Toast" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_2">ปังปิ้งเนยนม</h3>
+                            <p class="menu-price">฿45</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/strawberry_bingsu_1781938721560.png" alt="Bingsu" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_3">บิงซูสตรอเบอร์รี่</h3>
+                            <p class="menu-price">฿120</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.4s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/493540617_2527023530970327_8570458719034524791_n.jpg" alt="Thai Tea" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_4">ชาไทยพรีเมียม</h3>
+                            <p class="menu-price">฿55</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/44342331_775477832791581_5534039281854578688_n.jpg" alt="Pink Milk" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_5">นมชมพูเย็น</h3>
+                            <p class="menu-price">฿55</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/492846847_2529634777375869_7035050521733813971_n.jpg" alt="Cocoa" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_6">โกโก้เข้มข้น</h3>
+                            <p class="menu-price">฿60</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/matcha_latte_1781938736225.png" alt="Matcha" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_7">มัทฉะลาเต้</h3>
+                            <p class="menu-price">฿75</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.4s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/493473120_2528534147485932_1438962868243656304_n.jpg" alt="Strawberry Toast" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_8">ปังปิ้งแยมสตรอเบอร์รี่</h3>
+                            <p class="menu-price">฿45</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/44318093_775478239458207_3282462492936110080_n.jpg" alt="Volcano Ice" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_9">ปังเย็นภูเขาไฟ</h3>
+                            <p class="menu-price">฿89</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/493540617_2527023530970327_8570458719034524791_n.jpg" alt="Green Tea" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_10">ชาเขียวนม</h3>
+                            <p class="menu-price">฿55</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/492412841_2527023350970345_4918805182070823305_n.jpg" alt="Caramel Milk" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_11">นมสดคาราเมล</h3>
+                            <p class="menu-price">฿65</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.4s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/44342331_775477832791581_5534039281854578688_n.jpg" alt="Croffle" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_12">ครอฟเฟิลเนยสด</h3>
+                            <p class="menu-price">฿59</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 13 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/492846847_2529634777375869_7035050521733813971_n.jpg" alt="Italian Soda" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_13">อิตาเลียนโซดา</h3>
+                            <p class="menu-price">฿50</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 14 -->
+                    <div class="menu-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="menu-img-wrap">
+                            <img src="./เมนูร้าน/492942909_2528367987502548_811911000064678643_n.jpg" alt="Hot Milk" class="menu-img">
+                        </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name" data-i18n="menu_14">นมสดร้อน</h3>
+                            <p class="menu-price">฿40</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section bg-white" id="gallery">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-subtitle">Gallery</span>
+                    <h2 class="section-title" data-i18n="gallery_title">มุมโปรดที่แม้กก้า</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="gallery-masonry fade-in-up">
+                    <div class="gallery-item item-large">
+                        <img src="./บรรยากาศในร้าน/461514505_2344750892530926_8616067714999523478_n.jpg" alt="Atmosphere 1">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="gallery-item item-tall">
+                        <img src="./บรรยากาศในร้าน/492518988_2527277434278270_2006123765050258299_n.jpg" alt="Atmosphere 2">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./บรรยากาศในร้าน/494147542_2529628654043148_5498278050551664507_n.jpg" alt="Atmosphere 3">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="gallery-item item-wide">
+                        <img src="./บรรยากาศในร้าน/492549908_2527277360944944_1235157329857653281_n.jpg" alt="Atmosphere 4">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Us Section -->
+        <section class="section visit-section" id="visit-us">
+            <div class="container">
+                <div class="visit-grid">
+                    <div class="visit-info fade-in-up">
+                        <span class="section-subtitle">Location</span>
+                        <h2 class="section-title text-left" data-i18n="visit_title">แวะมาหาเรา</h2>
+                        <p class="visit-desc" data-i18n="visit_desc">สัมผัสบรรยากาศอบอุ่น และเครื่องดื่มละมุนลิ้นได้ทุกวัน</p>
+                        
+                        <div class="info-blocks">
+                            <div class="info-block">
+                                <div class="info-icon"><i class="far fa-clock"></i></div>
+                                <div class="info-text">
+                                    <h3 data-i18n="visit_hours_title">เวลาเปิด-ปิด</h3>
+                                    <p class="highlight-text" data-i18n="visit_hours_text">เปิดทุกวัน 10:00 - 20:00 น.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-block">
+                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="info-text">
+                                    <h3 data-i18n="visit_loc_title">ที่ตั้งร้าน</h3>
+                                    <p data-i18n="visit_loc_text">ร้านแม้กก้านมละมุน<br>(หากมีรายละเอียดซอย/ถนน สามารถเพิ่มเติมที่นี่)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-block">
+                                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="info-text">
+                                    <h3 data-i18n="visit_contact_title">ติดต่อสอบถาม</h3>
+                                    <p>08X-XXX-XXXX</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/jeeri.oat" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="Line"><i class="fab fa-line"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container fade-in-up" style="transition-delay: 0.2s;">
+                        <!-- Embed Google Maps -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.525547071661!2d100.5281862148281!3d13.747113190350702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ0JzQ5LjYiTiAxMDDCsDMxJzQ5LjMiRQ!5e0!3m2!1sen!2sth!4v1620000000000!5m2!1sen!2sth" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="./logo.png" alt="Makka Nom Lamun Logo">
+            </div>
+            <p class="footer-copy">&copy; 2026 Makka Nom Lamun. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
